@@ -1,0 +1,13 @@
+name: geo
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - geopandas
+  - osmnx
+  - shapely>=2
+  - pyproj
+  - rasterio
+  - matplotlib
+  - pyyaml
+  - pytest
+  - jupyterlab

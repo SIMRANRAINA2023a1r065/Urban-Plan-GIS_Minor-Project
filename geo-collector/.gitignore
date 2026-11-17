@@ -1,0 +1,9 @@
+data/raw/*
+data/external/*
+data/processed/*
+!data/*/.gitkeep
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+cache/
+*.pyc

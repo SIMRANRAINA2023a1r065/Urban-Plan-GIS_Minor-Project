@@ -1,0 +1,54 @@
+# ---- Phase 1 configuration: change values here, not in code ----
+paths:
+  raw_dir: data/raw              # cached downloads (safe to delete)
+  processed_dir: data/processed  # final outputs
+
+aoi:
+  # Use either a place name OR a bbox. If both are set, bbox wins.
+  place: null                    # e.g. "Jammu, Jammu and Kashmir, India"
+  bbox: [74.80, 32.67, 74.95, 32.80]   # west, south, east, north (lon/lat). Start small!
+
+osm:
+  network_type: all              # all | drive | walk | bike
+  building_tags: {building: true}
+  fetch_pois: true               # schools, hospitals, markets, bus stops, ...
+  fetch_landuse: true            # residential, commercial, forest, water, parks, ...
+  fetch_boundaries: true         # administrative boundaries (wards/cities) if mapped in OSM
+  poi_tags:
+    amenity: true
+    shop: true
+    public_transport: true
+    railway: [station, halt]
+    highway: [bus_stop]
+    tourism: true
+    healthcare: true
+
+rasters:                         # terrain + land cover (public AWS buckets)
+  enabled: true
+  dem_path: null                 # optional local DEM GeoTIFF if the download fails
+  landcover_path: null           # optional local ESA WorldCover GeoTIFF
+
+# Any extra local layers (e.g. ward boundaries from Jammu University GIS, municipal data).
+# Put files in data/external/ and list them here; they are clipped to the AOI and added to the GeoPackage.
+external_layers: []
+#  - {name: wards, path: data/external/wards.geojson}
+
+open_buildings:
+  enabled: true
+  # Download manually (see README, Day 3) and put the file here.
+  path: data/external/open_buildings_jammu.csv.gz
+  min_confidence: 0.70
+
+processing:
+  min_building_area_m2: 10
+  overlap_threshold: 0.5         # drop an Open Buildings footprint if >=50% is covered by OSM
+  grid_size_m: 500
+
+output:
+  gpkg_name: jammu_phase1.gpkg
+  write_geojson: true
+
+# Used only by run_tiled.py (whole district)
+tiling:
+  tile_km: 10          # tile size; use 5 if downloads time out
+  overlap_deg: 0.001   # download margin (~100 m) so edge features arrive whole

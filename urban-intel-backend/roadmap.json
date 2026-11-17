@@ -1,0 +1,14 @@
+[
+  {"id": "PII70108-1",  "week": 1,  "title": "Project Setup and Data Ingestion Pipeline",            "dates": "Sep 20 - 26, 2026",       "status": "done"},
+  {"id": "PII70108-2",  "week": 2,  "title": "Privacy Protocol Implementation (PII Blurring)",        "dates": "Sep 27 - Oct 03, 2026",   "status": "backlog"},
+  {"id": "PII70108-3",  "week": 3,  "title": "Urban Planning Module: Building Footprint Extraction",  "dates": "Oct 04 - 10, 2026",       "status": "backlog"},
+  {"id": "PII70108-4",  "week": 4,  "title": "Urban Planning Module: Temporal Built-up Area Change Detection", "dates": "Oct 11 - 17, 2026", "status": "backlog"},
+  {"id": "PII70108-5",  "week": 5,  "title": "Connectivity Module: Road Network Mapping",             "dates": "Oct 18 - 24, 2026",       "status": "backlog"},
+  {"id": "PII70108-6",  "week": 6,  "title": "Connectivity Module: Settlement Accessibility Analysis", "dates": "Oct 25 - 31, 2026",      "status": "backlog"},
+  {"id": "PII70108-7",  "week": 7,  "title": "Sustainable Development Module: NDVI Generation",       "dates": "Nov 01 - 07, 2026",       "status": "backlog"},
+  {"id": "PII70108-8",  "week": 8,  "title": "Sustainable Development Module: Temporal Vegetation Tracking", "dates": "Nov 08 - 14, 2026", "status": "backlog"},
+  {"id": "PII70108-9",  "week": 9,  "title": "Vectorization and Topology Validation",                 "dates": "Nov 15 - 21, 2026",       "status": "backlog"},
+  {"id": "PII70108-10", "week": 10, "title": "Agentic Orchestration Layer and Workflow Integration",  "dates": "Nov 22 - 28, 2026",       "status": "backlog"},
+  {"id": "PII70108-11", "week": 11, "title": "Web-GIS Dashboard Development and Reporting",           "dates": "Nov 29 - Dec 05, 2026",   "status": "backlog"},
+  {"id": "PII70108-12", "week": 12, "title": "Final Integration, Testing, and Demonstration Preparation", "dates": "Dec 06 - 12, 2026",   "status": "backlog"}
+]

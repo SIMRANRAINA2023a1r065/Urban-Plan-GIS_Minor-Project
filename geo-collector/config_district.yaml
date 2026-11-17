@@ -1,0 +1,52 @@
+# ---- Whole Jammu DISTRICT, tile by tile. Separate folders so your city data stays untouched ----
+# 1) preview:  python run_tiled.py --config config_district.yaml --list-tiles
+# 2) run:      python run_tiled.py --config config_district.yaml --no-open-buildings --no-rasters
+# 3) re-run the SAME command (no --refresh) to retry only failed tiles
+paths:
+  raw_dir: data/raw_district
+  processed_dir: data/processed_district
+
+aoi:
+  place: "Jammu District, Jammu and Kashmir, India"   # check the outline in tiles.gpkg; if it looks wrong, use a bbox instead
+  bbox: null
+
+osm:
+  network_type: drive            # start with drivable roads; "all" adds footpaths and is much heavier
+  building_tags: {building: true}
+  fetch_pois: true
+  fetch_landuse: true
+  fetch_boundaries: false        # off for tiled runs: admin boundaries are huge and time out; use external_layers for wards
+  overpass_url: null             # optional alternative Overpass server, e.g. "https://<mirror>/api"  (default: https://overpass-api.de/api)
+  poi_tags:
+    amenity: true
+    shop: true
+    public_transport: true
+    railway: [station, halt]
+    highway: [bus_stop]
+    tourism: true
+    healthcare: true
+
+tiling:
+  tile_km: 10                    # use 5 if tiles keep timing out
+  overlap_deg: 0.001             # about 100 m extra download around each tile so edge features are complete
+
+rasters:
+  enabled: true
+  dem_path: null
+  landcover_path: null
+
+external_layers: []
+
+open_buildings:
+  enabled: true
+  path: data/external/open_buildings_jammu.csv.gz
+  min_confidence: 0.70
+
+processing:
+  min_building_area_m2: 10
+  overlap_threshold: 0.5
+  grid_size_m: 2000              # coarse cells keep the coverage map readable for a big area
+
+output:
+  gpkg_name: jammu_district.gpkg
+  write_geojson: false           # GeoJSON of hundreds of thousands of buildings is huge

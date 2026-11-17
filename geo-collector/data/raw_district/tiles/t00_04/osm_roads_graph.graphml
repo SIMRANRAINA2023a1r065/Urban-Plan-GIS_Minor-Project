@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d12" for="edge" attr.name="geometry" attr.type="string" />
+  <key id="d11" for="edge" attr.name="length" attr.type="string" />
+  <key id="d10" for="edge" attr.name="reversed" attr.type="string" />
+  <key id="d9" for="edge" attr.name="oneway" attr.type="string" />
+  <key id="d8" for="edge" attr.name="highway" attr.type="string" />
+  <key id="d7" for="edge" attr.name="osmid" attr.type="string" />
+  <key id="d6" for="node" attr.name="street_count" attr.type="string" />
+  <key id="d5" for="node" attr.name="x" attr.type="string" />
+  <key id="d4" for="node" attr.name="y" attr.type="string" />
+  <key id="d3" for="graph" attr.name="simplified" attr.type="string" />
+  <key id="d2" for="graph" attr.name="crs" attr.type="string" />
+  <key id="d1" for="graph" attr.name="created_with" attr.type="string" />
+  <key id="d0" for="graph" attr.name="created_date" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="10261748087">
+      <data key="d4">32.927021</data>
+      <data key="d5">74.3833866</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="10261748089">
+      <data key="d4">32.9271112</data>
+      <data key="d5">74.3843539</data>
+      <data key="d6">1</data>
+    </node>
+    <node id="12626611657">
+      <data key="d4">32.8680802</data>
+      <data key="d5">74.4223047</data>
+      <data key="d6">3</data>
+    </node>
+    <node id="12626611677">
+      <data key="d4">32.8662893</data>
+      <data key="d5">74.4179454</data>
+      <data key="d6">1</data>
+    </node>
+    <edge source="10261748087" target="10261748089" id="0">
+      <data key="d7">1121962822</data>
+      <data key="d8">residential</data>
+      <data key="d9">False</data>
+      <data key="d10">False</data>
+      <data key="d11">90.84678247551159</data>
+      <data key="d12">LINESTRING (74.3833866 32.927021, 74.383781 32.9270517, 74.3843539 32.9271112)</data>
+    </edge>
+    <edge source="10261748089" target="10261748087" id="0">
+      <data key="d7">1121962822</data>
+      <data key="d8">residential</data>
+      <data key="d9">False</data>
+      <data key="d10">True</data>
+      <data key="d11">90.84678247551159</data>
+      <data key="d12">LINESTRING (74.3843539 32.9271112, 74.383781 32.9270517, 74.3833866 32.927021)</data>
+    </edge>
+    <edge source="12626611657" target="12626611677" id="0">
+      <data key="d7">1363687856</data>
+      <data key="d8">unclassified</data>
+      <data key="d9">False</data>
+      <data key="d10">True</data>
+      <data key="d11">455.32067095939726</data>
+      <data key="d12">LINESTRING (74.4223047 32.8680802, 74.4221994 32.8680533, 74.4219768 32.8679722, 74.4216523 32.8678551, 74.4214457 32.8677762, 74.4211587 32.8676659, 74.4207832 32.8675194, 74.4199759 32.8671545, 74.4196942 32.8670486, 74.4193965 32.8669427, 74.4191712 32.8668278, 74.4190451 32.8667309, 74.4188628 32.866616, 74.4187286 32.8665529, 74.418498 32.8664944, 74.4183236 32.8664538, 74.4181225 32.8663659, 74.4179454 32.8662893)</data>
+    </edge>
+    <edge source="12626611677" target="12626611657" id="0">
+      <data key="d7">1363687856</data>
+      <data key="d8">unclassified</data>
+      <data key="d9">False</data>
+      <data key="d10">False</data>
+      <data key="d11">455.32067095939715</data>
+      <data key="d12">LINESTRING (74.4179454 32.8662893, 74.4181225 32.8663659, 74.4183236 32.8664538, 74.418498 32.8664944, 74.4187286 32.8665529, 74.4188628 32.866616, 74.4190451 32.8667309, 74.4191712 32.8668278, 74.4193965 32.8669427, 74.4196942 32.8670486, 74.4199759 32.8671545, 74.4207832 32.8675194, 74.4211587 32.8676659, 74.4214457 32.8677762, 74.4216523 32.8678551, 74.4219768 32.8679722, 74.4221994 32.8680533, 74.4223047 32.8680802)</data>
+    </edge>
+    <data key="d0">2026-10-21 00:29:11</data>
+    <data key="d1">OSMnx 2.1.1</data>
+    <data key="d2">epsg:4326</data>
+    <data key="d3">True</data>
+  </graph>
+</graphml>
